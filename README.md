@@ -39,7 +39,7 @@ The project was designed to demonstrate practical skills in full‑stack web dev
 ## 📂 Project structure (simplified)
 
 ```
-Drinkkiarkisto/
+drinkkiarkisto/
 ├── index.php              # Homepage
 ├── search.php             # Search interface
 ├── recipe.php             # Recipe detail page
