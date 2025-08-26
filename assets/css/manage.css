@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    width: 350px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+aside>h2 {
+    align-self: stretch;
+
+    color: #25283D;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.admin-links {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.admin-links>a {
+    color: #0C6748;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 20px;
+    background: #E5E5E5;
+}
+
+.table-header {
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    background: #0C6748;
+}
+
+.table-header-item {
+    display: flex;
+    padding: 13px 9px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.table-header-item>span {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.table-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.table-header-item {
+    display: flex;
+    padding: 13px 9px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.table-header-item>span {
+    display: flex;
+    padding: 13px 9px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+button {
+    all: unset;
+
+    cursor: pointer;
+
+    display: flex;
+    height: 40px;
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: 20px;
+    background: #0C6748;
+
+}
+
+button>span {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.table-row {
+    display: flex;
+    height: 60px;
+    padding: 0 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.table-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+    /* flex = active */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    background: rgba(0, 0, 0, 0.60);
+    backdrop-filter: blur(10px);
+}
+
+.popup {
+    display: none;
+    /* active = flex */
+    width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    border-radius: 26px;
+    background: #EAEAEA;
+}
+
+.popup-header {
+    display: flex;
+    padding: 18px 20px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    padding: 18px 20px;
+    align-items: stretch;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.popup-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.popup-content>section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.popup.active {
+    display: flex;
+}

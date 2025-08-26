@@ -1,0 +1,67 @@
+main {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container h2 {
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.container span {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container button {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    height: 52px;
+    padding-left: 1px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+    border-radius: 26px;
+    background: #0C6748;
+}
+
+.container button span {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

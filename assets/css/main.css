@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --theme-color: #0C6748;
+    --primary-button-color: #0C6748;
+    /* 0C6748 */
+    --secondary-button-color: #25283D;
+    --input-focus-color: #0C6748;
+    --background-color: #eaeaea;
+    --primary-text-color: #25283D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    user-select: none;
+}
+
+span {
+    color: var(--primary-text-color);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 52px;
+}
+
+.input-wrapper .input-field {
+    width: 100%;
+    height: 100%;
+    padding-right: 50px;
+}
+
+.input-field {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    border: 1px solid #D0D0D0;
+    background: #D9D9D9;
+    color: var(--primary-text-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-field:focus {
+    outline: none;
+    border: var(--input-focus-color) solid 1px;
+}
+
+.select-field {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    border: 1px solid #D0D0D0;
+    background: #D9D9D9;
+    color: var(--primary-text-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    /* poistetaan se normaali kuvake ja laitetaan oma paljon hienompi */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('../icons/chevron-right-22px.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 40px;
+}
+
+.select-field:focus {
+    outline: none;
+    border: var(--input-focus-color) solid 1px;
+}
+
+.input-checker-icon {
+    /* default to invisible */
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes loadingAnimationSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner-animation {
+    animation: loadingAnimationSpinner 1s linear infinite;
+}
+
+@keyframes invalid-shake-animation {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-2px);
+    }
+
+    40% {
+        transform: translateX(2px);
+    }
+
+    80% {
+        transform: translateX(1px);
+    }
+}
+
+.invalid-shake {
+    animation: invalid-shake-animation 0.4s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes valid-shake-animation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(1px);
+    }
+}
+
+.valid-shake {
+    animation: valid-shake-animation 0.6s ease;
+    animation-iteration-count: 1;
+}
+
+.input-label {
+    color: var(--primary-text-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

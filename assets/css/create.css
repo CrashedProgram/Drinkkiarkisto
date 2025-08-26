@@ -1,0 +1,348 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-recipe-container {
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.create-recipe-container h2 {
+    color: #25283D;
+    font-family: Inter, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.create-recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+
+
+.ingredient-wrapper {
+    display: flex;
+    height: 52px;
+    align-items: center;
+    align-self: stretch;
+
+    border-radius: 26px;
+    border: 1px solid #D9D9D9;
+    background: #D9D9D9;
+}
+
+.ingredient-wrapper .ingredient-name-field {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.ingredient-wrapper .ingredient-quantity-field {
+    display: flex;
+    padding: 16px 0;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+
+.ingredient-quantity-field::-webkit-outer-spin-button,
+.ingredient-quantity-field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ingredient-wrapper .ingredient-unit-field {
+    display: flex;
+    padding: 16px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.ingredient-wrapper .ingredient-delete-icon {
+    display: flex;
+    width: 52px;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.add-ingredient-button {
+    width: 120px;
+    height: 32px;
+}
+
+.textarea-field {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 16px 20px;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+
+    background: #D9D9D9;
+    border-radius: 26px;
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+
+    min-width: 500px;
+    max-width: 500px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    width: 100%;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+    border-radius: 26px;
+    background: #0C6748;
+}
+
+button>span {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    height: 52px;
+    padding: 12px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.checkbox-wrapper input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-content: center;
+    background: #ffffff;
+    border: 1px solid #D9D9D9;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.checkbox-wrapper input::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: transform 0.1s ease-in-out;
+}
+
+.checkbox-wrapper input:checked {
+    background: #0C6748;
+    border-color: #0C6748;
+}
+
+.checkbox-wrapper input:checked::after {
+    transform: scale(1);
+}
+
+.checkbox-wrapper label {
+    color: #25283D;
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+
+/* result item styles */
+
+.result-item {
+    display: flex;
+    height: 110px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: 10px;
+    border: 1px solid #D0D0D0;
+    background: #EEE;
+}
+
+.result-item-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.result-item-overview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.result-item-name {
+    align-self: stretch;
+
+    color: #25283D;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result-item-info {
+    color: #8F8F8F;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result-item-likes {
+    display: flex;
+    height: 12px;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+}
+
+.result-item-like-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.result-item-like-count {
+    display: flex;
+    width: 18px;
+    height: 12px;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #25283D;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result-item-warning {
+    color: #FC814A;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result-item-button {
+    display: flex;
+    width: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 7px;
+    align-self: stretch;
+}
+
+.result-item-button-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.result-item-button-link {
+    color: #0C6748;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result-item-button-icon {
+    width: 22px;
+    height: 22px;
+}
